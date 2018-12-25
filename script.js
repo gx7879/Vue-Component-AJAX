@@ -36,7 +36,7 @@ var app = new Vue({
   // 請在此撰寫 JavaScript
   mounted: function(){
     const vm = this;
-    const api = '//opendata2.epa.gov.tw/AQI.json';
+    const api = 'https://cors-anywhere.herokuapp.com/http://opendata2.epa.gov.tw/AQI.json';
     
     // 使用 jQuery ajax
     $.get(api).then(function( response ) {
