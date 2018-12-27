@@ -31,7 +31,7 @@ var app = new Vue({
     data: [],
     location: '',
     stared: [],
-    filter: 'all',
+    filter: '',
   },
   // 請在此撰寫 JavaScript
   mounted: function(){
@@ -92,17 +92,12 @@ var app = new Vue({
     },
     selectCun: function(){
       var vm = this;
-      if(this.filter == 'all' && this.location == ''){
+      if( this.location == ''){
         return vm.data;
       }else{
         return this.data.filter(function(item){
           return vm.location == item.County;
         })
-      }
-    },
-    locationVal: function(){
-      if(this.location.length>0){
-        this.filter = 'select';
       }
     },
 
